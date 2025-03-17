@@ -1,0 +1,95 @@
+/* cinemas.module.css */
+.cinemasContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pageHeader h1 {
+  color: #2d3748;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.pageHeader p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.secondaryContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Animações e transições */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cinemasContainer {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .secondaryContent {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 640px) {
+  .pageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mainContent {
+    gap: 1.5rem;
+  }
+
+  .secondaryContent {
+    gap: 1.5rem;
+  }
+}
+
+/* Modo escuro (opcional) */
+@media (prefers-color-scheme: dark) {
+  .cinemasContainer {
+    background-color: #1a202c;
+    color: #e2e8f0;
+  }
+
+  .pageHeader h1 {
+    color: #f7fafc;
+  }
+
+  .pageHeader p {
+    color: #a0aec0;
+  }
+}
